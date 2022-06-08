@@ -1,0 +1,415 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 1000px) {
+  .productTool {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-around !important;
+  }
+  #Account {
+    margin: 13vh 150px !important;
+  }
+  .menu-info {
+    padding: 10px 150px !important;
+}
+  .products{
+    margin: 100px !important;
+  }
+  .homeImg img {
+    height: 70vh !important;
+  }
+  .product {
+    width: 30% !important;
+  }
+  .product img {
+    height: 45vw !important;
+  }
+  .carrousel-box {
+    width: 50vw !important;
+  }
+  .productTool {
+    width: 50vw !important;
+    height: 70vh !important;
+  }
+  .hugeProductBox {
+    display: flex !important;
+  }
+  .productTool button {
+    width: 80% !important;
+  }
+  .hugeBoxCart {
+    margin: 12vh auto 0 auto !important;
+    width: 70% !important;
+  }
+  .hugeBoxForm {
+    width: 70% !important;
+    margin: auto !important;
+  }
+}
+
+nav {
+  background-color: #fdfcfa;
+  color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  z-index: 999999;
+}
+
+.tab {
+  top: 10vh;
+  position: absolute;
+}
+
+.complete-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeImg {
+  margin-top: 10vh;
+  display: flex;
+  justify-content: center;
+}
+
+.homeImg img {
+  width: 100%;
+  height: 55vh;
+  object-fit: cover;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.product {
+  width: 40%;
+  margin-top: 20px;
+}
+
+.product img {
+  width: 100%;
+  height: 55vw;
+  object-fit: cover;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  padding: 100px;
+  background-color: black;
+  color: white;
+}
+
+.carrousel-box {
+  margin-top: 12vh;
+}
+
+.slider img {
+  width: 80% !important;
+  height: 70vh;
+  object-fit: cover;
+}
+
+.thumbs-wrapper img {
+  height: 80px;
+  object-fit: cover;
+}
+
+.carousel .thumbs {
+  display: flex;
+  justify-content: center;
+}
+
+p.carousel-status {
+  display: none;
+}
+
+.productTool {
+  width: 80%;
+  margin: auto;
+}
+
+.productTool select {
+  margin-top: 10px !important;
+  width: 100% !important;
+  height: 40px !important;
+  border: 1px solid black !important;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.productTool button {
+  margin-top: 10px;
+  width: 100%;
+  height: 40px;
+  border: 1px solid black;
+  background-color: black;
+  color: white;
+  margin-bottom: 50px;
+}
+
+.cartItem {
+  border: 1px solid black;
+  margin: 10px;
+  padding: 20px;
+  height: 130px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cartItem img {
+  width: 100px;
+  object-fit: cover;
+}
+
+button.cartButton {
+  width: calc(100% - 20px);
+  height: 50px;
+  background-color: black;
+  color: white;
+  border: none;
+  margin-bottom: 30px;
+}
+
+.form-box {
+  margin: 12vh 10px 0px 10px;
+}
+
+.css-xn6ruc > :not(style) {
+  width: calc(100% - 15px) !important;
+}
+
+.css-1gjgmky-MuiToggleButtonGroup-root .MuiToggleButtonGroup-grouped {
+  width: 20vw;
+}
+
+.soon {
+  background-color: #000000cc;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.fakeSelector {
+  display: flex;
+}
+
+.option:first-child {
+  margin-left: 0 !important;
+}
+
+.option {
+  background-color: #e4e2de;
+  color: black;
+  margin: 5px;
+  padding: 10px;
+  min-width: 40px;
+  display: flex;
+  justify-content: center;
+  border-radius: 50px;
+}
+
+.menu {
+  position: fixed;
+  left: 0;
+  top: 10vh;
+  bottom: 0;
+  background-color: white;
+  z-index: 999999999999;
+  width: 100%;
+  height: 100vh;
+  transform: translateX(-100vw);
+}
+
+.show {
+  transition: 1s;
+  transform: translateX(0vw);
+}
+
+.hide {
+  transition: 1s;
+}
+
+.close {
+  color: black;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.menu-info {
+  color: black;
+  top: 10px;
+  position: absolute;
+  width: 100%;
+  padding: 10px;
+}
+
+.menu-info p {
+  font-size: 20px;
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: sans-serif;
+}
+
+.MuiOutlinedInput-root.MuiInputBase-root.MuiInputBase-colorPrimary.MuiInputBase-fullWidth.MuiInputBase-formControl.MuiInputBase-adornedEnd.MuiAutocomplete-inputRoot.css-154xyx0-MuiInputBase-root-MuiOutlinedInput-root {
+  border-radius: 40px;
+  -webkit-appearance: none;
+}
+
+button.login {
+  width: 100%;
+  height: 40px;
+  background-color: #292a33;
+  color: white;
+  border: none;
+  border-radius: 50px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-info h3 {
+  text-align: center;
+}
+
+.menu-info h5 {
+  text-align: center;
+  color: red;
+  text-decoration: underline;
+}
+
+.searchForm{
+  position: relative;
+}
+
+.searchForm input {
+  width: 100%;
+  height: 40px;
+  border-radius: 0;
+  border: none;
+  padding: 10px;
+  border-bottom: 1px solid black;
+  margin-bottom: 40px;
+}
+
+.searchForm button{
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 8px;
+  right: 13px;
+  color: black !important;
+  z-index: 999999999999 !important;
+}
+
+li.thumb {
+    width: 60px !important;
+}
+
+.carousel .thumb img {
+  vertical-align: top;
+  height: 60px !important;
+}
+
+.successBox {
+  margin-top: 12vh;
+}
+
+.successTitles {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.successTitles h1, .successTitles h2{
+  text-align: center;
+}
+
+.successInfo {
+  margin: 10px 50px 0 50px;
+}
+
+.successInfo p {
+  margin: 10px;
+}
+
+.successInfo p span {
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.successTitles button {
+  width: 30vw;
+  height: 40px;
+  margin: 15px;
+  background-color: #009ee3;
+  border: none;
+  color: white;
+  border-radius: 50px;
+}
+
+.successTitles p {
+  color: #009ee3;
+}
+
+#Account{
+  margin-top: 13vh;
+}
+
+#Account h2{
+  text-align: center;
+}
+
+#Account .order{
+  padding: 20px;
+  margin: 30px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#Account .order p {
+  margin: 10px;
+}
