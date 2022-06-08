@@ -406,6 +406,9 @@ li.thumb {
   padding: 20px;
   margin: 30px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.product-order{
   display: flex;
   justify-content: space-between;
 }

@@ -23,7 +23,7 @@ function Consignor() {
             {products.length < 1 && "No tienes ordenes realizadas"}
             </p>
             {products && products.map((product) => (
-                <div className="order">
+                <div className="order product-order">
                   <div>
                     <p>Nombre : {product.name}</p>
                     <p>Precio Actual : ${product.price}</p>
