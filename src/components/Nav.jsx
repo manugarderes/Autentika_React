@@ -7,6 +7,7 @@ import Badge from "@mui/material/Badge";
 import CloseIcon from "@mui/icons-material/Close";
 import Menu from "./Menu";
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
+import Logo from "../logo.png";
 
 function Nav({setMenu, menu}) {
   const navigate = useNavigate();
@@ -31,7 +32,7 @@ function Nav({setMenu, menu}) {
         >
           <img
             style={{ height: "10vh" }}
-            src="https://i.ibb.co/8YgSnWR/image.png"
+            src={Logo}
             alt=""
           />
         </h1>
