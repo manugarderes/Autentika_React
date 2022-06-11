@@ -41,9 +41,6 @@ function Menu({ menu, setMenu }) {
     axios.get("https://autentika.herokuapp.com/api/types").then((result) => {
       setTypes(result.data);
     });
-    axios.get("https://autentika.herokuapp.com/api/appusers").then((result) => {
-      setUsers(result.data);
-    });
   }, [menu]);
   return (
     <div className={menu ? "menu show" : "menu hide"}>
