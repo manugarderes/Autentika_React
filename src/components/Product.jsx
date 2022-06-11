@@ -32,7 +32,7 @@ function Product() {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`https://autentika.herokuapp.com/api/product/${id}`)
+      .get(`${process.env.REACT_APP_API}/api/product/${id}`)
       .then((result) => {
         setProduct(result.data);
         if (
@@ -42,11 +42,11 @@ function Product() {
         }
       });
     axios
-      .get(`https://autentika.herokuapp.com/api/images/${id}`)
+      .get(`${process.env.REACT_APP_API}/api/images/${id}`)
       .then((result) => {
         setImages(result.data);
       });
-    axios.get(`https://autentika.herokuapp.com/api/products`).then((result) => {
+    axios.get(`${process.env.REACT_APP_API}/api/products`).then((result) => {
       setProducts(result.data);
       setLoading(false);
     });

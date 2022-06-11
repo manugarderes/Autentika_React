@@ -16,8 +16,8 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import SearchIcon from "@mui/icons-material/Search";
-import VerifiedIcon from '@mui/icons-material/Verified';
-import AddIcon from '@mui/icons-material/Add';
+import VerifiedIcon from "@mui/icons-material/Verified";
+import AddIcon from "@mui/icons-material/Add";
 
 function Menu({ menu, setMenu }) {
   const cookies = new Cookies();
@@ -38,7 +38,7 @@ function Menu({ menu, setMenu }) {
   const [showTypes, setShowTypes] = useState(false);
   const [visibility, setVisibility] = useState(false);
   useEffect(() => {
-    axios.get("https://autentika.herokuapp.com/api/types").then((result) => {
+    axios.get(process.env.REACT_APP_API + "/api/types").then((result) => {
       setTypes(result.data);
     });
   }, [menu]);
@@ -54,7 +54,7 @@ function Menu({ menu, setMenu }) {
           </form>
           <p>
             <span
-              style={{ fontFamily: "sans-serif",cursor:"pointer" }}
+              style={{ fontFamily: "sans-serif", cursor: "pointer" }}
               onClick={() => {
                 navigate(`shop/0`);
                 setMenu(false);
@@ -63,13 +63,20 @@ function Menu({ menu, setMenu }) {
             >
               Productos
             </span>{" "}
-            <AddIcon style={{cursor:"pointer"}} onClick={() => setShowTypes(!showTypes)} />
+            <AddIcon
+              style={{ cursor: "pointer" }}
+              onClick={() => setShowTypes(!showTypes)}
+            />
           </p>
           {types &&
             showTypes &&
             types.map((type) => (
               <p
-                style={{ padding: "0 20px 0 20px", fontSize: "18px",cursor:"pointer" }}
+                style={{
+                  padding: "0 20px 0 20px",
+                  fontSize: "18px",
+                  cursor: "pointer",
+                }}
                 key={type.id}
                 onClick={() => {
                   navigate(`shop/${type.id}`);
@@ -90,31 +97,34 @@ function Menu({ menu, setMenu }) {
           {cookies.get("token") ? (
             <div>
               <hr />
-              <p style={{cursor:"pointer"}} onClick={() => {
-                navigate(`/account`)
-                setMenu(false);
-                setShowTypes(false);
-                }}>
+              <p
+                style={{ cursor: "pointer" }}
+                onClick={() => {
+                  navigate(`/account`);
+                  setMenu(false);
+                  setShowTypes(false);
+                }}
+              >
                 Mi Cuenta
                 <PersonIcon />
               </p>
-              {cookies.get("token").isConsignor === 1 &&
-              <p 
-              style={{cursor:"pointer"}}
-              onClick={() => {
-                navigate(`/consignor`)
-                setMenu(false);
-                setShowTypes(false);
-              }}
-              >
-                Consignador Verificado
-                <VerifiedIcon style={{color:"green"}}/>
-              </p>
-              }
+              {cookies.get("token").isConsignor === 1 && (
+                <p
+                  style={{ cursor: "pointer" }}
+                  onClick={() => {
+                    navigate(`/consignor`);
+                    setMenu(false);
+                    setShowTypes(false);
+                  }}
+                >
+                  Consignador Verificado
+                  <VerifiedIcon style={{ color: "green" }} />
+                </p>
+              )}
               <p
                 style={{
                   textDecoration: "underline",
-                  cursor:"pointer"
+                  cursor: "pointer",
                 }}
                 onClick={() => {
                   cookies.remove("token");
@@ -126,7 +136,7 @@ function Menu({ menu, setMenu }) {
             </div>
           ) : (
             <button
-            style={{cursor:"pointer"}}
+              style={{ cursor: "pointer" }}
               onClick={() => {
                 setSituation("login");
                 setError(false);
@@ -150,34 +160,34 @@ function Menu({ menu, setMenu }) {
               type="email"
               onChange={(e) => setUsernameL(e.target.value)}
             />
-              <TextField
-                id="standard-basic"
-                label="Contraseña"
-                variant="standard"
-                type={visibility ? "text" : "password"}
-                onChange={(e) => setContraseñaL(e.target.value)}
+            <TextField
+              id="standard-basic"
+              label="Contraseña"
+              variant="standard"
+              type={visibility ? "text" : "password"}
+              onChange={(e) => setContraseñaL(e.target.value)}
+            />
+            {visibility && (
+              <RemoveRedEyeIcon
+                style={{ cursor: "pointer" }}
+                onClick={() => setVisibility(!visibility)}
+                className="eye"
               />
-              {visibility && (
-                <RemoveRedEyeIcon
-                style={{cursor:"pointer"}}
-                  onClick={() => setVisibility(!visibility)}
-                  className="eye"
-                />
-              )}
-              {!visibility && (
-                <VisibilityOffIcon
-                style={{cursor:"pointer"}}
-                  onClick={() => setVisibility(!visibility)}
-                  className="eye"
-                />
-              )}
+            )}
+            {!visibility && (
+              <VisibilityOffIcon
+                style={{ cursor: "pointer" }}
+                onClick={() => setVisibility(!visibility)}
+                className="eye"
+              />
+            )}
             <Button
-              style={{ marginTop: "20px",cursor:"pointer" }}
+              style={{ marginTop: "20px", cursor: "pointer" }}
               color="success"
               variant="outlined"
               onClick={() => {
                 axios
-                  .post("https://autentika.herokuapp.com/api/login", {
+                  .post(process.env.REACT_APP_API + "/api/login", {
                     username: usernameL,
                     contraseña: contraseñaL,
                   })
@@ -201,7 +211,7 @@ function Menu({ menu, setMenu }) {
                 setSituation("register");
                 setError(false);
               }}
-              style={{ marginTop: "20px",cursor:"pointer" }}
+              style={{ marginTop: "20px", cursor: "pointer" }}
               variant="outlined"
             >
               Registrarme
@@ -211,7 +221,7 @@ function Menu({ menu, setMenu }) {
                 setSituation("menu");
                 setError(false);
               }}
-              style={{ marginTop: "20px",cursor:"pointer" }}
+              style={{ marginTop: "20px", cursor: "pointer" }}
               variant="outlined"
             >
               Volver
@@ -244,27 +254,27 @@ function Menu({ menu, setMenu }) {
               type="number"
               onChange={(e) => setCelularR(e.target.value)}
             />
-              <TextField
-                id="standard-basic"
-                label="Contraseña"
-                variant="standard"
-                type={visibility ? "text" : "password"}
-                onChange={(e) => setContraseñaR(e.target.value)}
+            <TextField
+              id="standard-basic"
+              label="Contraseña"
+              variant="standard"
+              type={visibility ? "text" : "password"}
+              onChange={(e) => setContraseñaR(e.target.value)}
+            />
+            {visibility && (
+              <RemoveRedEyeIcon
+                style={{ top: "196px", cursor: "pointer" }}
+                onClick={() => setVisibility(!visibility)}
+                className="eye"
               />
-              {visibility && (
-                <RemoveRedEyeIcon
-                  style={{ top: "196px",cursor:"pointer" }}
-                  onClick={() => setVisibility(!visibility)}
-                  className="eye"
-                />
-              )}
-              {!visibility && (
-                <VisibilityOffIcon
-                  style={{ top: "196px",cursor:"pointer" }}
-                  onClick={() => setVisibility(!visibility)}
-                  className="eye"
-                />
-              )}
+            )}
+            {!visibility && (
+              <VisibilityOffIcon
+                style={{ top: "196px", cursor: "pointer" }}
+                onClick={() => setVisibility(!visibility)}
+                className="eye"
+              />
+            )}
             <Button
               onClick={() => {
                 if (
@@ -273,7 +283,7 @@ function Menu({ menu, setMenu }) {
                   )
                 ) {
                   axios
-                    .post("https://autentika.herokuapp.com/api/create/user", {
+                    .post(process.env.REACT_APP_API + "/api/create/user", {
                       nombre: nombreR,
                       username: usernameR,
                       celular: celularR,
@@ -298,7 +308,7 @@ function Menu({ menu, setMenu }) {
                   }, 2000);
                 }
               }}
-              style={{ marginTop: "20px",cursor:"pointer" }}
+              style={{ marginTop: "20px", cursor: "pointer" }}
               color="success"
               variant="outlined"
             >
@@ -309,7 +319,7 @@ function Menu({ menu, setMenu }) {
                 setSituation("login");
                 setError(false);
               }}
-              style={{ marginTop: "20px",cursor:"pointer" }}
+              style={{ marginTop: "20px", cursor: "pointer" }}
               variant="outlined"
             >
               Iniciar sesion
@@ -319,7 +329,7 @@ function Menu({ menu, setMenu }) {
                 setSituation("menu");
                 setError(false);
               }}
-              style={{ marginTop: "20px",cursor:"pointer" }}
+              style={{ marginTop: "20px", cursor: "pointer" }}
               variant="outlined"
             >
               Volver

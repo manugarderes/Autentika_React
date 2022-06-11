@@ -24,12 +24,12 @@ function Shop({ info }) {
     setLoading(true);
     if (id > 0) {
       axios
-        .get(`https://autentika.herokuapp.com/api/products/${id}`)
+        .get(`${process.env.REACT_APP_API}/api/products/${id}`)
         .then((result) => {
           setProducts(result.data);
           setLoading(false);
         });
-      axios.get("https://autentika.herokuapp.com/api/types").then((result) => {
+      axios.get(process.env.REACT_APP_API + "/api/types").then((result) => {
         result.data.map((item) => {
           if (item.id == id) {
             setType(item);
@@ -38,7 +38,7 @@ function Shop({ info }) {
       });
     } else {
       axios
-        .get(`https://autentika.herokuapp.com/api/products`)
+        .get(`${process.env.REACT_APP_API}/api/products`)
         .then((result) => {
           setProducts(result.data);
           setLoading(false);

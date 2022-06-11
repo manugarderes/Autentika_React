@@ -21,7 +21,7 @@ function Home() {
   const [products, setProducts] = useState();
   useEffect(() => {
     setLoading(true);
-    axios.get("https://autentika.herokuapp.com/api/products").then((result) => {
+    axios.get(process.env.REACT_APP_API + "/api/products").then((result) => {
       setProducts(result.data);
       setLoading(false);
     });

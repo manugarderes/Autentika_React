@@ -35,7 +35,7 @@ function Soon() {
             </p>
             <p
               onClick={() =>
-                (window.location.href = "http://autentika.herokuapp.com/admin")
+                (window.location.href = process.env.REACT_APP_API + "/admin")
               }
               style={{
                 textAlign: "center",

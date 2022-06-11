@@ -12,7 +12,7 @@ function Success() {
           <h2>Su orden fue confirmada</h2>
           <button style={{cursor:"pointer"}} onClick={() => {
             cookies.set("cart", [])
-            window.location.href = `https://autentika.herokuapp.com/order/${order.id}`}
+            window.location.href = `${process.env.REACT_APP_API}/order/${order.id}`}
             }>Pagar</button>
           <p>Seras refirigido a mercadopago</p>
         </div>
