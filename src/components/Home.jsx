@@ -42,7 +42,7 @@ function Home() {
           </div>
           <div className="products">
             {products &&
-              products.map((product) => <ProductItem product={product} />)}
+              products.map((product) => <ProductItem key={product.id} product={product} />)}
           </div>
         </div>
       )}

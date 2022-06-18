@@ -36,7 +36,7 @@ function Product() {
       .then((result) => {
         setProduct(result.data);
         if (
-          cookies.get("cart").find((item) => item.name === result.data.name)
+          cookies.get("cart") && cookies.get("cart").find((item) => item.name === result.data.name)
         ) {
           setExist(true);
         }
