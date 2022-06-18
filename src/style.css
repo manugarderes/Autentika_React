@@ -416,3 +416,40 @@ li.thumb {
 #Account .order p {
   margin: 10px;
 }
+
+/* --- */
+
+#Vende {
+  margin-top: 12vh;
+}
+
+#Vende h1{
+  text-align: center;
+}
+
+#Vende .infos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+#Vende .info{
+  margin: 10px;
+  padding: 10px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+#Vende .infoTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+#Vende .infos p {
+  text-align: center;
+  margin: 5px;
+}

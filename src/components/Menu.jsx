@@ -88,8 +88,15 @@ function Menu({ menu, setMenu }) {
               </p>
             ))}
           <hr />
-          <p>
-            Sobre Nosotros <InfoIcon />
+          <p 
+          style={{cursor:"pointer"}}
+            onClick={() => {
+              navigate(`/vende`);
+              setMenu(false);
+              setShowTypes(false);
+            }}
+          >
+            Vende <InfoIcon />
           </p>
           <p>
             Contaco <SupportIcon />

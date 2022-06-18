@@ -12,6 +12,7 @@ import { BrowserRouter as Router, Link, useLocation } from "react-router-dom";
 import Success from "./components/Success";
 import Account from "./components/Account";
 import Consignor from "./components/Consignor"
+import Vende from "./components/Vende";
 
 function App() {
   const [menu, setMenu] = useState(false);
@@ -35,6 +36,7 @@ function App() {
         <Route path="/success" element={<Success />} />
         <Route path="/account" element={<Account />} />
         <Route path="/consignor" element={<Consignor />} />
+        <Route path="/vende" element={<Vende />} />
 
         <Route
           path="*"
