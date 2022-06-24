@@ -25,7 +25,7 @@ function Vende() {
                 MUJER
               </p>
               <p>La selección de prendas depende de múltiples factores…</p>
-              <p>ESTADO</p>
+              <p className="bold">ESTADO</p>
               <p>
                 Es excluyente que la prenda este en buen estado en general… ¿a
                 que nos referimos? Las prendas deben estar lavadas; sin olores,
@@ -36,7 +36,7 @@ function Vende() {
                 excluyentes son aplicables a cualquier artículo que pretenda
                 ingresar a la tienda.
               </p>
-              <p>TEMPORADA</p>
+              <p className="bold">TEMPORADA</p>
               <p>
                 Que la prenda se corresponda con la estación es sumamente
                 considerado en el proceso de selección. Hay prendas no
@@ -45,7 +45,7 @@ function Vende() {
                 debido al costo de almacenaje, si se entregan fuera de temporada
                 no las aceptamos. (ej: campera de invierno en verano)
               </p>
-              <p>MARCA</p>
+              <p className="bold">MARCA</p>
               <p>
                 Las prendas de mayor rotación suelen ser de marcas nacionales e
                 internacionales; por lo tanto, en el proceso de selección
@@ -70,17 +70,17 @@ function Vende() {
           {infoToShow === 2 && (
             <div>
               <p>
-                PODES LLEVARTE EL 30% DEL VALOR DE VENTA DE LAS PRENDAS EN
-                EFECTIVO, AL MOMENTO DE ENTREGARLAS.
+                PODES LLEVARTE EL <span className="bold">30% DEL VALOR DE VENTA DE LAS PRENDAS EN
+                EFECTIVO</span> , AL MOMENTO DE ENTREGARLAS.
               </p>
               <p>
-                PODES DEJAR LAS PRENDAS A CONSIGNACIÓN Y COBRAR EL 50% DEL VALOR
-                DE VENTA. PODES SEGUIR TUS VENTAS EN TIEMPO REAL A TRAVÉS DE TU
+                PODES DEJAR LAS PRENDAS A <span className="bold">CONSIGNACIÓN</span> Y COBRAR EL <span className="bold">50% DEL VALOR
+                DE VENTA</span>. PODES SEGUIR TUS VENTAS EN TIEMPO REAL A TRAVÉS DE TU
                 USUARIO DE autentika.uy
               </p>
               <p>
-                PODES OPTAR POR LLEVARTE EL 60% DEL VALOR DE VENTA DE LAS
-                PRENDAS EN CRÉDITO, PARA COMPRAR EN AUTENTIKA.
+                PODES OPTAR POR LLEVARTE EL <span className="bold">60% DEL VALOR DE VENTA DE LAS
+                PRENDAS EN CRÉDITO</span>, PARA COMPRAR EN AUTENTIKA.
               </p>
             </div>
           )}

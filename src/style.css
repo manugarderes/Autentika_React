@@ -451,5 +451,10 @@ li.thumb {
 
 #Vende .infos p {
   text-align: center;
-  margin: 5px;
+  margin: 15px;
+}
+
+#Vende .infos .bold{
+  font-weight: bold;
+  font-family: sans-serif;
 }
