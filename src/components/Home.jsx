@@ -19,16 +19,18 @@ function Home() {
   };
   const [loading, setLoading] = useState(false);
   const [products, setProducts] = useState();
-  const [counter, setCounter] = useState()
+  const [counter, setCounter] = useState();
   useEffect(() => {
     setLoading(true);
     axios.get(process.env.REACT_APP_API + "/api/products").then((result) => {
       setProducts(result.data);
       setLoading(false);
     });
-    axios.get(`${process.env.REACT_APP_API}/api/order/selled/counter`).then((result) => {
-      setCounter(result.data + 10000)
-    })
+    axios
+      .get(`${process.env.REACT_APP_API}/api/order/selled/counter`)
+      .then((result) => {
+        setCounter(result.data + 10000);
+      });
   }, []);
   return (
     <div>
@@ -42,14 +44,27 @@ function Home() {
       ) : (
         <div>
           <div className="homeImg">
-            <div className="counter">
-              Prendas Vendidas: {counter && counter.toLocaleString().replace(",", ".")}
+            <img
+              style={{ backgroundColor: "#cac3c3" }}
+              src="https://www.retroka.com/wp-content/uploads/2021/10/rk_S21_web_HS_2_Oct21.gif"
+            />
+          </div>
+          <div className="counter">
+            <h3 style={{textAlign:"center"}}>Los Números Hablan</h3>
+            <div className="counterDiv">
+              <h1>{counter && counter.toLocaleString().replace(",", ".")}</h1>
+              <p>Prendas Vendidas</p>
             </div>
-            <img style={{backgroundColor:"#cac3c3"}} src="https://www.retroka.com/wp-content/uploads/2021/10/rk_S21_web_HS_2_Oct21.gif" />
+            <div className="counterDiv">
+              <h1>100%</h1>
+              <p>Prendas Recicladas</p>
+            </div>
           </div>
           <div className="products">
             {products &&
-              products.map((product) => <ProductItem key={product.id} product={product} />)}
+              products.map((product) => (
+                <ProductItem key={product.id} product={product} />
+              ))}
           </div>
         </div>
       )}

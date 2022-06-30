@@ -473,10 +473,30 @@ li.thumb {
 }
 
 .counter {
-  background-color: red;
-  width: 100vw;
-  height: 30px;
+  background-color: #e9e3e3;
+  height: 300px;
   display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px;
+  box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+  flex-direction: column;
+}
+
+.counterDiv {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.counterDiv h1 {
+  font-weight: bold;
+  font-family: sans-serif;
+  font-size: 3rem;
+}
+
+.counterDiv p{
+  text-align: center;
+  color: green;
 }
