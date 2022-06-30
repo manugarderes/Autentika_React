@@ -66,11 +66,11 @@ function Product() {
             <div className="carrousel-box">
               <Carousel>
                 <div>
-                  <img src={product.img} />
+                  <img style={{backgroundColor:"#cac3c3"}} src={product.img} />
                 </div>
                 {images.map((image) => (
                   <div key={image.id}>
-                    <img src={image.img} />
+                    <img style={{backgroundColor:"#cac3c3"}} src={image.img} />
                   </div>
                 ))}
               </Carousel>
@@ -80,7 +80,7 @@ function Product() {
             <div className="carrousel-box">
               <Carousel>
                 <div>
-                  <img src={product.img} />
+                  <img style={{backgroundColor:"#cac3c3"}} src={product.img} />
                 </div>
               </Carousel>
             </div>
@@ -171,7 +171,7 @@ function Product() {
                 onClick={() => navigate(`/product/${product.id}`)}
                 className="product"
               >
-                <img src={product.img} />
+                <img style={{backgroundColor:"#cac3c3"}} src={product.img} />
                 <div className="product-info">
                   <p>{product.name}</p>
                   <p>${product.price}</p>

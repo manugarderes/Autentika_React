@@ -7,7 +7,7 @@ function Soon() {
       {show && (
         <div className="soon">
           <div>
-            <h1 style={{ textAlign: "center" }}>VOID - COMING SOON</h1>
+            <h1 style={{ textAlign: "center" }}>AUTENTIKA - COMING SOON</h1>
             <p style={{ textAlign: "center" }}>
               La aplicacion esta en etapa de desarrollo
             </p>

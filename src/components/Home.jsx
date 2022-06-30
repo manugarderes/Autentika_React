@@ -38,7 +38,7 @@ function Home() {
       ) : (
         <div>
           <div className="homeImg">
-            <img src="https://www.retroka.com/wp-content/uploads/2021/10/rk_S21_web_HS_2_Oct21.gif" />
+            <img style={{backgroundColor:"#cac3c3"}} src="https://www.retroka.com/wp-content/uploads/2021/10/rk_S21_web_HS_2_Oct21.gif" />
           </div>
           <div className="products">
             {products &&

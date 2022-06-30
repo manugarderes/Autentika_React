@@ -10,7 +10,7 @@ function ProductItem({product}) {
       onClick={() => navigate(`/product/${product.id}`)}
       className="product"
     >
-      <img src={product.img} />
+      <img style={{backgroundColor:"#cac3c3"}} src={product.img} />
       <div className="product-info">
         <p>{product.name}</p>
         <p>

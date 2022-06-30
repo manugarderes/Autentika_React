@@ -39,7 +39,7 @@ function Consignor() {
                 </p>
                 <p>Talle : {product.size}</p>
               </div>
-              <img style={{ height: "100px" }} src={product.img} />
+              <img style={{ height: "100px", backgroundColor:"#cac3c3" }} src={product.img} />
             </div>
           ))}
       </div>

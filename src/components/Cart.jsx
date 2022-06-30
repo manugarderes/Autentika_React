@@ -39,7 +39,7 @@ function Cart() {
                 Borrar
               </p>
             </div>
-            <img src={product.img} />
+            <img style={{backgroundColor:"#cac3c3"}} src={product.img} />
           </div>
         ))}
       <h3 style={{ margin: "10px" }}>Total ${total}</h3>
