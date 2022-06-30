@@ -88,8 +88,8 @@ function Menu({ menu, setMenu }) {
               </p>
             ))}
           <hr />
-          <p 
-          style={{cursor:"pointer"}}
+          <p
+            style={{ cursor: "pointer" }}
             onClick={() => {
               navigate(`/vende`);
               setMenu(false);
@@ -97,6 +97,16 @@ function Menu({ menu, setMenu }) {
             }}
           >
             Vende <InfoIcon />
+          </p>
+          <p
+            style={{ cursor: "pointer" }}
+            onClick={() => {
+              navigate(`/nosotros`);
+              setMenu(false);
+              setShowTypes(false);
+            }}
+          >
+            Nosotros <SupportIcon />
           </p>
           <p>
             Contaco <SupportIcon />

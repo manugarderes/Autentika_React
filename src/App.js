@@ -13,6 +13,7 @@ import Success from "./components/Success";
 import Account from "./components/Account";
 import Consignor from "./components/Consignor"
 import Vende from "./components/Vende";
+import Nosotros from "./components/Nosotros";
 
 function App() {
   const [menu, setMenu] = useState(false);
@@ -37,6 +38,7 @@ function App() {
         <Route path="/account" element={<Account />} />
         <Route path="/consignor" element={<Consignor />} />
         <Route path="/vende" element={<Vende />} />
+        <Route path="/nosotros" element={<Nosotros />} />
 
         <Route
           path="*"
