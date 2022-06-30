@@ -61,7 +61,7 @@ function Menu({ menu, setMenu }) {
                 setShowTypes(false);
               }}
             >
-              Productos
+              SHOP ONLINE
             </span>{" "}
             <AddIcon
               style={{ cursor: "pointer" }}
@@ -96,7 +96,7 @@ function Menu({ menu, setMenu }) {
               setShowTypes(false);
             }}
           >
-            Vende <InfoIcon />
+            Vendé <InfoIcon />
           </p>
           <p
             style={{ cursor: "pointer" }}
