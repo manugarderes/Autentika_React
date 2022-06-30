@@ -6,6 +6,7 @@ import Lottie from "react-lottie";
 import * as animationData from "../loader.json";
 import { useNavigate } from "react-router-dom";
 import ProductItem from "./ProductItem";
+import CountUp from 'react-countup';
 
 function Home() {
   const navigate = useNavigate();
@@ -51,7 +52,7 @@ function Home() {
           </div>
           <div className="counter">
             <div className="counterDiv">
-              <h1>{counter && counter.toLocaleString().replace(",", ".")}</h1>
+              <h1><CountUp end={counter} duration={10}/></h1>
               <p>PRENDAS RECIRCULADAS</p>
             </div>
           </div>
