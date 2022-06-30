@@ -82,8 +82,6 @@ nav {
 
 .homeImg {
   margin-top: 10vh;
-  display: flex;
-  justify-content: center;
 }
 
 .homeImg img {
@@ -472,4 +470,13 @@ li.thumb {
   text-align: center;
   width: 80%;
   margin: 10px;
+}
+
+.counter {
+  background-color: red;
+  width: 100vw;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
