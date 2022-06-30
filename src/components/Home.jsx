@@ -50,7 +50,6 @@ function Home() {
             />
           </div>
           <div className="counter">
-            <h3 style={{textAlign:"center"}}>Los Números Hablan</h3>
             <div className="counterDiv">
               <h1>{counter && counter.toLocaleString().replace(",", ".")}</h1>
               <p>PRENDAS RECIRCULADAS</p>
