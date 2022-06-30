@@ -53,11 +53,7 @@ function Home() {
             <h3 style={{textAlign:"center"}}>Los Números Hablan</h3>
             <div className="counterDiv">
               <h1>{counter && counter.toLocaleString().replace(",", ".")}</h1>
-              <p>Prendas Vendidas</p>
-            </div>
-            <div className="counterDiv">
-              <h1>100%</h1>
-              <p>Prendas Recicladas</p>
+              <p>PRENDAS RECIRCULADAS</p>
             </div>
           </div>
           <div className="products">

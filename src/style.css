@@ -473,10 +473,9 @@ li.thumb {
 }
 
 .counter {
-  background-color: #e9e3e3;
   height: 300px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   margin: 10px;
   box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
@@ -498,5 +497,4 @@ li.thumb {
 
 .counterDiv p{
   text-align: center;
-  color: green;
 }
