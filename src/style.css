@@ -18,8 +18,8 @@
   }
   .menu-info {
     padding: 10px 150px !important;
-}
-  .products{
+  }
+  .products {
     margin: 100px !important;
   }
   .homeImg img {
@@ -317,7 +317,7 @@ button.login {
   text-decoration: underline;
 }
 
-.searchForm{
+.searchForm {
   position: relative;
 }
 
@@ -331,7 +331,7 @@ button.login {
   margin-bottom: 40px;
 }
 
-.searchForm button{
+.searchForm button {
   background-color: transparent;
   border: none;
   position: absolute;
@@ -342,7 +342,7 @@ button.login {
 }
 
 li.thumb {
-    width: 60px !important;
+  width: 60px !important;
 }
 
 .carousel .thumb img {
@@ -361,7 +361,8 @@ li.thumb {
   align-items: center;
 }
 
-.successTitles h1, .successTitles h2{
+.successTitles h1,
+.successTitles h2 {
   text-align: center;
 }
 
@@ -392,21 +393,21 @@ li.thumb {
   color: #009ee3;
 }
 
-#Account{
+#Account {
   margin-top: 13vh;
 }
 
-#Account h2{
+#Account h2 {
   text-align: center;
 }
 
-#Account .order{
+#Account .order {
   padding: 20px;
   margin: 30px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.product-order{
+.product-order {
   display: flex;
   justify-content: space-between;
 }
@@ -421,7 +422,7 @@ li.thumb {
   margin-top: 12vh;
 }
 
-#Vende h1{
+#Vende h1 {
   text-align: center;
 }
 
@@ -432,7 +433,7 @@ li.thumb {
   margin-top: 50px;
 }
 
-#Vende .info{
+#Vende .info {
   margin: 10px;
   padding: 10px;
   border-top: 1px solid black;
@@ -452,12 +453,13 @@ li.thumb {
   margin: 15px;
 }
 
-#Vende .infos .bold{
+#Vende .infos .bold {
   font-weight: bold;
   font-family: sans-serif;
+  margin-top: 30px;
 }
 
-#Nosotros{
+#Nosotros {
   margin-top: 10vh;
   height: 100vh;
   width: 100vw;
@@ -466,7 +468,8 @@ li.thumb {
   align-items: center;
 }
 
-#Nosotros h1, #Nosotros p{
+#Nosotros h1,
+#Nosotros p {
   text-align: center;
   width: 80%;
   margin: 10px;
@@ -493,6 +496,22 @@ li.thumb {
   font-size: 3rem;
 }
 
-.counterDiv p{
+.counterDiv p {
   text-align: center;
+}
+
+.shopFilter {
+  margin-top: 13vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.filter {
+  border: none;
+  margin-top: 20px;
+  border-bottom: 1px solid black;
+  padding: 10px;
+  cursor: pointer;
 }

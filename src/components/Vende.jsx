@@ -75,8 +75,8 @@ function Vende() {
               </p>
               <p>
                 PODES DEJAR LAS PRENDAS A <span className="bold">CONSIGNACIÓN</span> Y COBRAR EL <span className="bold">50% DEL VALOR
-                DE VENTA</span>. PODES SEGUIR TUS VENTAS EN TIEMPO REAL A TRAVÉS DE TU
-                USUARIO DE autentika.uy
+                DE VENTA</span>. SEGUÍ TUS VENTAS EN TIEMPO REAL A TRAVÉS DE TU
+                USUARIO DE autentika.com.uy
               </p>
               <p>
                 PODES OPTAR POR LLEVARTE EL <span className="bold">60% DEL VALOR DE VENTA DE LAS

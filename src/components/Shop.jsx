@@ -8,6 +8,8 @@ import ProductItem from "./ProductItem";
 
 function Shop({ info }) {
   const navigate = useNavigate();
+  const [sizeSelected, setSizeSelected] = useState();
+  const [sizes, setSizes] = useState();
   const { id } = useParams();
   const [products, setProducts] = useState();
   const [type, setType] = useState();
@@ -28,6 +30,14 @@ function Shop({ info }) {
         .then((result) => {
           setProducts(result.data);
           setLoading(false);
+          let preSizes = [];
+          result.data.map((product) => {
+            if (!preSizes.find((item) => item === product.size)) {
+              preSizes.push(product.size);
+            }
+          });
+          setSizes(preSizes);
+          setSizeSelected(preSizes);
         });
       axios.get(process.env.REACT_APP_API + "/api/types").then((result) => {
         result.data.map((item) => {
@@ -37,27 +47,54 @@ function Shop({ info }) {
         });
       });
     } else {
-      axios
-        .get(`${process.env.REACT_APP_API}/api/products`)
-        .then((result) => {
-          setProducts(result.data);
-          setLoading(false);
-          setType({ name: "Todos los productos" });
+      axios.get(`${process.env.REACT_APP_API}/api/products`).then((result) => {
+        setProducts(result.data);
+        setLoading(false);
+        setType({ name: "Todos los productos" });
+        let preSizes = [];
+        result.data.map((product) => {
+          if (!preSizes.find((item) => item === product.size)) {
+            preSizes.push(product.size);
+          }
         });
+        setSizes(preSizes);
+        setSizeSelected(preSizes);
+      });
     }
   }, [id]);
 
   return (
     <div>
-      <h1
-        style={
-          !info
-            ? { marginTop: "13vh", textAlign: "center" }
-            : { marginTop: "13vh", textAlign: "center", fontSize: "15px" }
-        }
-      >
-        {info ? `resultados para busqueda : ${info}` : type && type.name}
-      </h1>
+      <div className="shopFilter">
+        <h1
+          style={
+            !info
+              ? {textAlign: "center" }
+              : {textAlign: "center", fontSize: "15px" }
+          }
+        >
+          {info ? `resultados para busqueda : ${info}` : type && type.name}
+        </h1>
+        {!info && (
+          <select
+          className="filter"
+            onChange={(e) => {
+              if (e.target.value === "ALL") {
+                setSizeSelected(sizes);
+              } else {
+                setSizeSelected([e.target.value]);
+              }
+            }}
+          >
+            <option selected disabled>
+              Filtrar por talle
+            </option>
+            <option value="ALL">Limpiar Filtros</option>
+            {sizes && sizes.map((size) => <option value={size}>Talle: {size}</option>)}
+          </select>
+        )}
+      </div>
+
       {info && (
         <p style={{ textAlign: "center" }}>
           {products &&
@@ -77,7 +114,11 @@ function Shop({ info }) {
       ) : !info ? (
         <div className="products">
           {products &&
-            products.map((product) => <ProductItem product={product} />)}
+            products.map((product) => {
+              if (sizeSelected.includes(product.size)) {
+                return <ProductItem product={product} />;
+              }
+            })}
         </div>
       ) : (
         <div className="products">
