@@ -17,6 +17,7 @@ import Nosotros from "./components/Nosotros";
 
 function App() {
   const [menu, setMenu] = useState(false);
+  const [situation, setSituation] = useState("menu");
   function useQuery() {
     const { search } = useLocation();
 
@@ -26,14 +27,14 @@ function App() {
   return (
     <div>
       <Soon />
-      <Nav setMenu={setMenu} menu={menu} />
+      <Nav situation={situation} setSituation={setSituation} setMenu={setMenu} menu={menu} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/product/:id" element={<Product />} />
         <Route path="/shop/:id" element={<Shop />} />
         <Route path="/search" element={<Shop info={query.get("info")} />} />
         <Route path="/cart" element={<Cart />} />
-        <Route path="/form" element={<Form setMenu={setMenu} menu={menu} />} />
+        <Route path="/form" element={<Form situation={situation} setSituation={setSituation} setMenu={setMenu} menu={menu} />} />
         <Route path="/success" element={<Success />} />
         <Route path="/account" element={<Account />} />
         <Route path="/consignor" element={<Consignor />} />

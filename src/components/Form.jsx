@@ -12,7 +12,7 @@ import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-function Form({ setMenu, menu }) {
+function Form({ setMenu, menu, setSituation }) {
   const navigate = useNavigate();
   const [alignment, setAlignment] = React.useState("mdeo");
   const handleChange = (event, newAlignment) => {
@@ -206,6 +206,7 @@ function Form({ setMenu, menu }) {
             style={{ cursor: "pointer" }}
             onClick={() => {
               setMenu(true);
+              setSituation("login")
             }}
             className="login"
           >

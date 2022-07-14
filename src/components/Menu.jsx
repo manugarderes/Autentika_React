@@ -19,13 +19,12 @@ import SearchIcon from "@mui/icons-material/Search";
 import VerifiedIcon from "@mui/icons-material/Verified";
 import AddIcon from "@mui/icons-material/Add";
 
-function Menu({ menu, setMenu }) {
+function Menu({ menu, setMenu, setSituation, situation}) {
   const cookies = new Cookies();
   const navigate = useNavigate();
   const [products, setProducts] = useState();
   const [productNames, setProductNames] = useState();
   const [types, setTypes] = useState();
-  const [situation, setSituation] = useState("menu");
   const [nombreR, setNombreR] = useState();
   const [usernameR, setUsernameR] = useState();
   const [celularR, setCelularR] = useState();

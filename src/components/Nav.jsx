@@ -9,7 +9,7 @@ import Menu from "./Menu";
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import Logo from "../logo.png";
 
-function Nav({setMenu, menu}) {
+function Nav({setMenu, menu, situation, setSituation}) {
   const navigate = useNavigate();
   const cookies = new Cookies();
   return (
@@ -43,7 +43,7 @@ function Nav({setMenu, menu}) {
         ) : (
           <ShoppingBagIcon style={{ color: "black" }} />
         )}
-        <Menu menu={menu} setMenu={setMenu}/>
+        <Menu situation={situation} setSituation={setSituation} menu={menu} setMenu={setMenu}/>
       </nav>
     </div>
   );
