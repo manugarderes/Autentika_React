@@ -52,7 +52,7 @@ function Home() {
           </div>
           <div className="counter">
             <div className="counterDiv">
-              <h1><CountUp end={counter} duration={10}/></h1>
+              <h1><CountUp end={10000} duration={10}/></h1>
               <p>PRENDAS RECIRCULADAS</p>
             </div>
           </div>

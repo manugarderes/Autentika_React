@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
@@ -15,9 +15,14 @@ import axios from "axios";
 function Form({ setMenu, menu, setSituation }) {
   const navigate = useNavigate();
   const [alignment, setAlignment] = React.useState("mdeo");
+  useEffect(() => {
+    if (!alignment) {
+      setAlignment("mdeo")
+    }
+  }, [alignment])
+  
   const handleChange = (event, newAlignment) => {
     setAlignment(newAlignment);
-    setBarrio("");
   };
   var total = 0;
   var products = "";
@@ -32,14 +37,11 @@ function Form({ setMenu, menu, setSituation }) {
   });
 
   const children = [
-    <ToggleButton value="pickUp" key="left">
-      <StoreIcon />
+    <ToggleButton className="ToggleButton" value="pickUp" key="left">
+      Retiro por local
     </ToggleButton>,
-    <ToggleButton value="mdeo" key="center">
-      <DeliveryDiningIcon />
-    </ToggleButton>,
-    <ToggleButton value="int" key="right">
-      <LocalShippingIcon />
+    <ToggleButton className="ToggleButton" value="mdeo" key="center">
+      Envío a Domicilio
     </ToggleButton>,
   ];
 
@@ -62,10 +64,7 @@ function Form({ setMenu, menu, setSituation }) {
     <div className="hugeBoxForm">
       {cookies.get("token") ? (
         <div className="form-box">
-          <h1>{alignment === "pickUp" && "Datos de Retiro"}</h1>
-          <h1>{alignment === "mdeo" && "Datos de envio a Montevideo"}</h1>
-          <h1>{alignment === "int" && "Datos de envio al Interior"}</h1>
-          <h1>{alignment === null && "Datos de envio a Montevideo"}</h1>
+          <h1>{"Datos de Envío"}</h1>
           {cart && (
             <div>
               <p>Productos: </p>
@@ -73,7 +72,7 @@ function Form({ setMenu, menu, setSituation }) {
               <p>Total : ${total}</p>
             </div>
           )}
-          <div style={{ marginTop: "20px" }} className="complete-center">
+          <div style={{ margin: "40px 0" }} className="complete-center">
             <ToggleButtonGroup size="small" {...control}>
               {children}
             </ToggleButtonGroup>
@@ -113,19 +112,9 @@ function Form({ setMenu, menu, setSituation }) {
               <TextField
                 onChange={(e) => setBarrio(e.target.value)}
                 id="standard-basic"
-                label={
-                  alignment === "mdeo"
-                    ? "Departamento"
-                    : "Departamento del Interior"
-                }
+                label={"Departamento"}
                 variant="standard"
-                value={
-                  alignment === "mdeo"
-                    ? "Montevideo"
-                    : !alignment
-                    ? "Montevideo"
-                    : barrio
-                }
+                value={barrio}
               />
             )}
             {alignment !== "pickUp" && (
@@ -162,26 +151,14 @@ function Form({ setMenu, menu, setSituation }) {
                     nombre: cookies.get("token").nombre,
                     numero: cookies.get("token").celular,
                     email: cookies.get("token").username,
-                    barrio:
-                      alignment !== "pickUp"
-                        ? alignment === "mdeo"
-                          ? "Montevideo"
-                          : !alignment
-                          ? "Montevideo"
-                          : barrio
-                        : "pickUp",
+                    barrio: alignment !== "pickUp" ? barrio : "pickUp",
                     calle: alignment !== "pickUp" ? calle : "pickUp",
                     puerta: alignment !== "pickUp" ? puerta : "pickUp",
                     instrucciones:
                       alignment !== "pickUp" ? instrucciones : "pickUp",
                     productos: products,
                     total: total,
-                    forma:
-                      alignment === "pickUp"
-                        ? "pickUp"
-                        : alignment === "mdeo"
-                        ? "Montevideo"
-                        : "Interior",
+                    forma: alignment === "pickUp" ? "pickUp" : "Envio",
                   })
                   .then((result) => {
                     cookies.set("order", result.data, { path: "/" });
@@ -189,11 +166,17 @@ function Form({ setMenu, menu, setSituation }) {
                   })
                   .catch((error) => setError(error.response.data.message));
               }}
-              style={{ marginBottom: "50px", cursor: "pointer" }}
+              style={{
+                marginBottom: "50px",
+                cursor: "pointer",
+                display: "flex",
+                justifyContent: "space-between",
+              }}
               color="success"
-              variant="outlined"
+              variant="contained"
             >
-              Ir a Pagar
+              Pagar
+              <span>${total}</span>
             </Button>
           </Box>
         </div>
@@ -206,7 +189,7 @@ function Form({ setMenu, menu, setSituation }) {
             style={{ cursor: "pointer" }}
             onClick={() => {
               setMenu(true);
-              setSituation("login")
+              setSituation("login");
             }}
             className="login"
           >

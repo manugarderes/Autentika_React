@@ -515,3 +515,15 @@ li.thumb {
   padding: 10px;
   cursor: pointer;
 }
+
+@media (max-width: 500px) {
+  .ToggleButton {
+    font-size: 10px !important;
+  }
+}
+
+.css-1x4vipr-MuiButtonBase-root-MuiToggleButton-root.Mui-selected{
+  background-color: #3e3e98 !important;
+  color: white !important;
+  cursor: auto !important;
+}
