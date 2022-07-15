@@ -37,10 +37,10 @@ function Form({ setMenu, menu, setSituation }) {
   });
 
   const children = [
-    <ToggleButton className="ToggleButton" value="pickUp" key="left">
+    <ToggleButton style={{width:"20vw"}} className="ToggleButton" value="pickUp" key="left">
       Retiro por local
     </ToggleButton>,
-    <ToggleButton className="ToggleButton" value="mdeo" key="center">
+    <ToggleButton style={{width:"20vw"}} className="ToggleButton" value="mdeo" key="center">
       Envío a Domicilio
     </ToggleButton>,
   ];
@@ -73,7 +73,7 @@ function Form({ setMenu, menu, setSituation }) {
             </div>
           )}
           <div style={{ margin: "40px 0" }} className="complete-center">
-            <ToggleButtonGroup style={{width:"20vw"}} size="small" {...control}>
+            <ToggleButtonGroup size="small" {...control}>
               {children}
             </ToggleButtonGroup>
           </div>
