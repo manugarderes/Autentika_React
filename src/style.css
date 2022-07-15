@@ -446,11 +446,13 @@ li.thumb {
   justify-content: center;
   font-weight: bold;
   font-family: sans-serif;
+  cursor: pointer;
 }
 
 #Vende .infos p {
   text-align: center;
   margin: 15px;
+  width: 80vw;
 }
 
 #Vende .infos .bold {
@@ -471,7 +473,7 @@ li.thumb {
 #Nosotros h1,
 #Nosotros p {
   text-align: center;
-  width: 80%;
+  width: 80vw;
   margin: 10px;
 }
 
