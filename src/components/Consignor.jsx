@@ -21,6 +21,7 @@ function Consignor() {
   return (
     <div id="Account">
       <h2>Hola, {cookies.get("token").nombre}</h2>
+      <h5 style={{textAlign:"center"}}>Area de consignador</h5>
       <div className="orders">
         <p style={{ textAlign: "center" }}>
           {products.length < 1 && "No tienes ordenes realizadas"}
