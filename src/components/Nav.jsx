@@ -38,7 +38,7 @@ function Nav({setMenu, menu, situation, setSituation}) {
         </h1>
         {cookies.get("cart") ? (
           <Badge badgeContent={cookies.get("cart").length} color="success">
-            <ShoppingCartIcon style={{cursor:"pointer"}} onClick={() => navigate("/cart")} />
+            <ShoppingBagIcon style={{cursor:"pointer"}} onClick={() => navigate("/cart")} />
           </Badge>
         ) : (
           <ShoppingBagIcon style={{ color: "black" }} />
