@@ -73,7 +73,7 @@ function Form({ setMenu, menu, setSituation }) {
             </div>
           )}
           <div style={{ margin: "40px 0" }} className="complete-center">
-            <ToggleButtonGroup size="small" {...control}>
+            <ToggleButtonGroup style={{width:"20vw"}} size="small" {...control}>
               {children}
             </ToggleButtonGroup>
           </div>
