@@ -131,7 +131,7 @@ function Form({ setMenu, menu, setSituation }) {
               <TextField
                 onChange={(e) => setCalle(e.target.value)}
                 id="standard-basic"
-                label="Ciudad"
+                label="Localidad"
                 variant="standard"
                 value={calle}
               />
