@@ -17,10 +17,10 @@ function Form({ setMenu, menu, setSituation }) {
   const [alignment, setAlignment] = React.useState("mdeo");
   useEffect(() => {
     if (!alignment) {
-      setAlignment("mdeo")
+      setAlignment("mdeo");
     }
-  }, [alignment])
-  
+  }, [alignment]);
+
   const handleChange = (event, newAlignment) => {
     setAlignment(newAlignment);
   };
@@ -37,10 +37,20 @@ function Form({ setMenu, menu, setSituation }) {
   });
 
   const children = [
-    <ToggleButton style={{width:"20vw"}} className="ToggleButton" value="pickUp" key="left">
+    <ToggleButton
+      style={{ width: "20vw" }}
+      className="ToggleButton"
+      value="pickUp"
+      key="left"
+    >
       Retiro por local
     </ToggleButton>,
-    <ToggleButton style={{width:"20vw"}} className="ToggleButton" value="mdeo" key="center">
+    <ToggleButton
+      style={{ width: "20vw" }}
+      className="ToggleButton"
+      value="mdeo"
+      key="center"
+    >
       Envío a Domicilio
     </ToggleButton>,
   ];
@@ -144,6 +154,18 @@ function Form({ setMenu, menu, setSituation }) {
                 value={instrucciones}
               />
             )}
+            <p>
+              Pick Up sin cargo en nuestro local de carrasco (Carlos Sáez 6418).
+            </p>
+            <p>
+              El envío a domcilio tiene un costo de $250 (pesos uruguayos) iva
+              inc.
+            </p>
+            <p>
+              El tiempo de entrega es de 3 días hábiles aproximadamente.
+              AUTENTIKA no se hace responsable por las demoras de la agencia de
+              envío.
+            </p>
             <Button
               onClick={() => {
                 axios
