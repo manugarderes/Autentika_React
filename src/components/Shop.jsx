@@ -50,7 +50,7 @@ function Shop({ info }) {
       axios.get(`${process.env.REACT_APP_API}/api/products`).then((result) => {
         setProducts(result.data);
         setLoading(false);
-        setType({ name: "Todos los productos" });
+        setType({ name: "TODOS LOS PRODUCTOS" });
         let preSizes = [];
         result.data.map((product) => {
           if (!preSizes.find((item) => item === product.size)) {
@@ -73,7 +73,7 @@ function Shop({ info }) {
               : {textAlign: "center", fontSize: "15px" }
           }
         >
-          {info ? `resultados para busqueda : ${info}` : type && type.name}
+          {info ? `resultados para busqueda : ${info}` : type && type.name.toUpperCase()}
         </h1>
         {!info && (
           <select
