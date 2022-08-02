@@ -111,7 +111,16 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+}
+
+.product-info p:first-child {
+  color: grey;
+}
+
+.product-info p:last-child {
+  color: black;
+  font-weight: bold;
+  font-family: sans-serif;
 }
 
 .footer {
