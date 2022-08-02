@@ -108,7 +108,7 @@ function Menu({ menu, setMenu, setSituation, situation}) {
             Nosotros <SupportIcon />
           </p>
           <p>
-            Contaco <SupportIcon />
+            Contacto <SupportIcon />
           </p>
           {cookies.get("token") ? (
             <div>
