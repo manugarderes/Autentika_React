@@ -18,7 +18,7 @@ function Contact() {
           <div className="col-md-6">
             <h3>Contactanos</h3>
             <hr />
-            <form name="contact" method="POST" data-netlify="true" className="contactForm">
+            <form name="contact" netlify method="post" className="contactForm">
               <input name="name" required type="text" placeholder="Nombre Completo" />
               <input name="phone" required type="text" placeholder="Celular" />
               <input name="email" required type="email" placeholder="Mail" />
