@@ -627,6 +627,7 @@ li.thumb {
   width: 30%;
   color: white;
   padding: 10px;
+  border-radius: none !important;
 }
 
 #Contact .contactInfo p{
