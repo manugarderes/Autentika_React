@@ -616,7 +616,7 @@ li.thumb {
   border: none;
   border-bottom: 1px solid black;
   width: 100%;
-  margin: 10px;
+  margin-bottom: 15px;
   outline: none !important;
   padding: 5px;
 }
@@ -627,7 +627,6 @@ li.thumb {
   width: 30%;
   color: white;
   padding: 10px;
-  margin: 10px;
 }
 
 #Contact .contactInfo p{
