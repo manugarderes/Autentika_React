@@ -619,6 +619,7 @@ li.thumb {
   margin-bottom: 15px;
   outline: none !important;
   padding: 5px;
+  border-radius: 0 !important;
 }
 
 #Contact .contactForm button{
@@ -627,7 +628,6 @@ li.thumb {
   width: 30%;
   color: white;
   padding: 10px;
-  border-radius: none !important;
 }
 
 #Contact .contactInfo p{
