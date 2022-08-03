@@ -20,9 +20,8 @@ function Contact() {
             <hr />
             <form name="contact" netlify method="post" className="contactForm">
               <input name="name" required type="text" placeholder="Nombre Completo" />
-              <input name="phone" required type="text" placeholder="Celular" />
               <input name="email" required type="email" placeholder="Mail" />
-              <textarea name="info" required placeholder="Que necesitas?"></textarea>
+              <textarea name="message" required placeholder="Que necesitas?"></textarea>
               <button type="submit">Enviar</button>
             </form>
           </div>
