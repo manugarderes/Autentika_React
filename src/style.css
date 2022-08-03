@@ -629,3 +629,8 @@ li.thumb {
   padding: 10px;
   margin: 10px;
 }
+
+#Contact .contactInfo p{
+  display: flex;
+  align-items: center;
+}
