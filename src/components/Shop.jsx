@@ -87,7 +87,7 @@ function Shop({ info }) {
             }}
           >
             <option selected disabled>
-              Filtrar por talle
+              FILTRAR
             </option>
             <option value="ALL">Limpiar Filtros</option>
             {sizes && sizes.map((size) => <option value={size}>Talle: {size}</option>)}
