@@ -527,6 +527,7 @@ li.thumb {
   cursor: pointer !important;
   -webkit-appearance: none !important;
   background-color: white !important;
+  color: black !important;
 }
 
 @media (max-width: 500px) {
