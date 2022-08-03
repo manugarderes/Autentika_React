@@ -19,7 +19,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import VerifiedIcon from "@mui/icons-material/Verified";
 import AddIcon from "@mui/icons-material/Add";
 
-function Menu({ menu, setMenu, setSituation, situation}) {
+function Menu({ menu, setMenu, setSituation, situation }) {
   const cookies = new Cookies();
   const navigate = useNavigate();
   const [products, setProducts] = useState();
@@ -107,7 +107,14 @@ function Menu({ menu, setMenu, setSituation, situation}) {
           >
             Nosotros <SupportIcon />
           </p>
-          <p>
+          <p
+            style={{ cursor: "pointer" }}
+            onClick={() => {
+              navigate(`/contacto`);
+              setMenu(false);
+              setShowTypes(false);
+            }}
+          >
             Contacto <SupportIcon />
           </p>
           {cookies.get("token") ? (

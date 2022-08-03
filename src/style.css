@@ -520,7 +520,7 @@ li.thumb {
 }
 
 .filter {
-  border: none !important; 
+  border: none !important;
   margin-top: 20px !important;
   border-bottom: 1px solid black !important;
   padding: 10px !important;
@@ -536,7 +536,7 @@ li.thumb {
   }
 }
 
-.css-1hwqkh2.Mui-selected{
+.css-1hwqkh2.Mui-selected {
   background-color: #3e3e98 !important;
   color: white !important;
   cursor: auto !important;
@@ -574,11 +574,12 @@ li.thumb {
   position: relative;
 }
 
-.slide img{
+.slide img {
   object-fit: cover;
 }
 
-.slider-infinite::before, .slider::after {
+.slider-infinite::before,
+.slider::after {
   background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
   content: "";
   height: 100px;
@@ -597,11 +598,34 @@ li.thumb {
 }
 .slider-infinite .slide-track {
   -webkit-animation: scroll 40s linear infinite;
-          animation: scroll 40s linear infinite;
+  animation: scroll 40s linear infinite;
   display: flex;
   width: calc(250px * 14);
 }
 .slider-infinite .slide {
   height: 100px;
   width: 250px;
+}
+
+#Contact {
+  margin-top: 14vh;
+}
+
+#Contact .contactForm input,
+#Contact .contactForm textarea {
+  border: none;
+  border-bottom: 1px solid black;
+  width: 100%;
+  margin: 10px;
+  outline: none !important;
+  padding: 5px;
+}
+
+#Contact .contactForm button{
+  background-color: black;
+  border: none;
+  width: 30%;
+  color: white;
+  padding: 10px;
+  margin: 10px;
 }

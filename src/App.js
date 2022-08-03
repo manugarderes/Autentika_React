@@ -14,6 +14,7 @@ import Account from "./components/Account";
 import Consignor from "./components/Consignor"
 import Vende from "./components/Vende";
 import Nosotros from "./components/Nosotros";
+import Contact from "./components/Contact";
 
 function App() {
   const [menu, setMenu] = useState(false);
@@ -40,6 +41,7 @@ function App() {
         <Route path="/consignor" element={<Consignor />} />
         <Route path="/vende" element={<Vende />} />
         <Route path="/nosotros" element={<Nosotros />} />
+        <Route path="/contacto" element={<Contact />} />
 
         <Route
           path="*"
