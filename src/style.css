@@ -7,6 +7,14 @@
   padding: 0;
 }
 
+.slider-infinite:before, .slider:after {
+  background: none !important;
+}
+
+.carousel .thumb {
+  display: none !important;
+}
+
 @media (min-width: 1000px) {
   .productTool {
     display: flex !important;
