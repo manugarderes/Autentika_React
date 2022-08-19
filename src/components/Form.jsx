@@ -15,6 +15,7 @@ import axios from "axios";
 function Form({ setMenu, menu, setSituation }) {
   const navigate = useNavigate();
   const [alignment, setAlignment] = React.useState("mdeo");
+  const [moreInfo, setMoreInfo] = useState(false)
   useEffect(() => {
     if (!alignment) {
       setAlignment("mdeo");
@@ -154,6 +155,9 @@ function Form({ setMenu, menu, setSituation }) {
                 value={instrucciones}
               />
             )}
+            <p style={!moreInfo ? {marginBottom: "100px", cursor:"pointer", textDecoration: "underline"} : {cursor:"pointer", textDecoration: "underline"}} onClick={() => setMoreInfo(!moreInfo)}>{!moreInfo ? "Mas Info" : "Menos"}</p>
+            {moreInfo && 
+            <>
             <p>
               Pick Up sin cargo en nuestro local de carrasco (Carlos Sáez 6418).
             </p>
@@ -166,6 +170,9 @@ function Form({ setMenu, menu, setSituation }) {
               AUTENTIKA no se hace responsable por las demoras de la agencia de
               envío.
             </p>
+            </>
+            }
+            
             <Button
               onClick={() => {
                 axios
