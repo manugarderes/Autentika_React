@@ -196,9 +196,13 @@ p.carousel-status {
   border: 1px solid black;
   margin: 10px;
   padding: 20px;
-  height: 130px;
+  height: auto;
   display: flex;
   justify-content: space-between;
+}
+
+.cartItem p{
+  margin: 0
 }
 
 .cartItem img {

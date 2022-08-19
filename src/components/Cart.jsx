@@ -19,8 +19,8 @@ function Cart() {
             <div>
               <h3>{product.name}</h3>
               <p>Talle: {product.size}</p>
-              <p>+ ${product.price}</p>
-              <hr />
+              <p style={{fontFamily: 'sans-serif', fontWeight: "bold"}}>+ ${product.price}</p>
+              <hr/>
               <p
               style={{cursor:"pointer"}}
                 onClick={() => {
@@ -42,7 +42,7 @@ function Cart() {
             <img style={{backgroundColor:"#cac3c3"}} src={product.img} />
           </div>
         ))}
-      <h3 style={{ margin: "10px" }}>Total ${total}</h3>
+      <h3 style={{ margin: "20px" }}>Total ${total}</h3>
       <div style={{ flexDirection: "column" }} className="complete-center">
         <button style={{cursor:"pointer"}} onClick={() => navigate("/form")} className="cartButton">
           CONTINUAR
