@@ -8,14 +8,14 @@ function Contact() {
     <div id="Contact">
       <div className="container">
         <div className="row">
-          <div className="col-md-6 contactInfo">
+          {/* <div className="col-md-6 contactInfo">
             <h3>Encontranos en las redes sociales</h3>
             <hr />
             <p><LocationOnIcon/> Carlos Sáez 6418</p>
             <p><PhoneIcon/> +598 97 748 613</p>
             <p><InstagramIcon/> <a href="https://www.instagram.com/autentika.secondhand/">@autentika.secondhand</a></p>
-          </div>
-          <div className="col-md-6">
+          </div> */}
+          <div className="col-md-12">
             <h3>Contactanos</h3>
             <hr />
             <form name="contact" netlify method="post" className="contactForm">
