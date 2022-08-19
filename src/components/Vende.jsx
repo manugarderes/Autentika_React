@@ -12,7 +12,7 @@ function Vende() {
   };
   return (
     <div id="Vende">
-      <h1>Info para vender</h1>
+      <h1>INFO PARA VENDER</h1>
       <div className="infos">
         <div className="info">
           <p onClick={() => handleChange(1)} className="infoTitle">
