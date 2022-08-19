@@ -161,7 +161,7 @@ function Form({ setMenu, menu, setSituation }) {
               El envío a domcilio tiene un costo de $250 (pesos uruguayos) iva
               inc.
             </p>
-            <p>
+            <p style={{marginBottom: "100px"}}>
               El tiempo de entrega es de 3 días hábiles aproximadamente.
               AUTENTIKA no se hace responsable por las demoras de la agencia de
               envío.
@@ -189,10 +189,13 @@ function Form({ setMenu, menu, setSituation }) {
                   .catch((error) => setError(error.response.data.message));
               }}
               style={{
-                marginBottom: "50px",
                 cursor: "pointer",
                 display: "flex",
                 justifyContent: "space-between",
+                position: "fixed",
+                bottom: "0",
+                left:"0",
+                rigth: "0"
               }}
               color="success"
               variant="contained"
