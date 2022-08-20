@@ -155,7 +155,7 @@ function Form({ setMenu, menu, setSituation }) {
                 value={instrucciones}
               />
             )}
-            <p style={!moreInfo ? {marginBottom: "100px", cursor:"pointer", textDecoration: "underline"} : {cursor:"pointer", textDecoration: "underline"}} onClick={() => setMoreInfo(!moreInfo)}>{!moreInfo ? "Mas Info" : "Menos"}</p>
+            <p style={!moreInfo ? {marginBottom: "100px", cursor:"pointer", textDecoration: "underline", fontFamily: "sans-serif", fontWeight: "bold"} : {cursor:"pointer", textDecoration: "underline", fontFamily: "sans-serif", fontWeight: "bold"}} onClick={() => setMoreInfo(!moreInfo)}>{!moreInfo ? "MÁS INFO" : "MENOS"}</p>
             {moreInfo && 
             <>
             <p>
